@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["inflacao"]
+
+[project]
+name = "inflacao-brasil"
+version = "1.0.0"
+description = "Inflação, salário mínimo, juros e dólar de 2015 a 2026 com dados abertos do Banco Central"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2", "matplotlib>=3.9", "requests>=2.32"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "jupyter", "nbconvert", "ipykernel"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
